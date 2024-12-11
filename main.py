@@ -2,6 +2,7 @@ import pyglet
 import os
 import sys
 
+#shit here doesnt work
 
 # def resource_path(relative_path):
 #     if hasattr(sys, '_MEIPASS'):
@@ -13,22 +14,20 @@ import sys
 # resource_path('pathci.jpg')
 # resource_path('чукасочка.png')
 
+#neither this
 
-
-def resource_path(relative_path):
-    """ Получает путь к ресурсам, независимо от того, запущено приложение из .py или .exe """
-    try:
-        # PyInstaller создает временную папку и хранит ресурсы там
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-
-    return os.path.join(base_path, relative_path)
-
-# Пример использования
-image_path = resource_path("mukyu.png")
-sound_path = resource_path("Mukyu.mp3")
-icon_image_path = resource_path("pathci.jpg.mp3")
+#def resource_path(relative_path):
+#    """ Получает путь к ресурсам, независимо от того, запущено приложение из .py или .exe """
+#    try:
+#        # PyInstaller создает временную папку и хранит ресурсы там
+#        base_path = sys._MEIPASS
+#    except Exception:
+#        base_path = os.path.abspath(".")
+#
+#    return os.path.join(base_path, relative_path)
+#image_path = resource_path("mukyu.png")
+#sound_path = resource_path("Mukyu.mp3")
+#icon_image_path = resource_path("pathci.jpg.mp3")
 
 
 image = pyglet.resource.image('pathci.jpg')
